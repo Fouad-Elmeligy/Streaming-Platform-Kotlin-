@@ -17,19 +17,8 @@ class CreditCardPayment(
     override fun validatePaymentInfo(): Boolean {
         TODO("Not yet implemented")
     }
-    private fun validateCardNumber(): Boolean{
-        //Remove spaces and dashes
-        val cleanCardNumber=cardNumber.replace(Regex("[ -]"),"")
 
-        //Check that the number contains only numbers
-        if (!cleanCardNumber.matches(Regex("\\d+")))
-            return false
-
-        if (cleanCardNumber.length !in 13..19)
-            return false
-
-    }
-    fun luhnCheck(cardNumber: String): Boolean{
+    fun luhnCheck(cardNumber: String){
 
     }
 }
